@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="suite" parallel="tests">
+  <test name="Sanity in FF">
+    <parameter name="browser" value="FF"/>
+    <classes>
+      <class name="testng111.multipleactions"/>
+      <class name="testng111.multipleactions"/>
+      
+      <class name=""/>
+    </classes>
+  </test> <!-- Sanity -->
+  <test name="Sanity in FF">
+    <parameter name="browser" value="FF"/>
+    <classes>
+      <class name="testng111.draganddrop"/>
+      <class name="testng111.draganddrop"/>
+    </classes>
+  </test> <!-- Sanity -->
+</suite> <!-- suite -->
+            

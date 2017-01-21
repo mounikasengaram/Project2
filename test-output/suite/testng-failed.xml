@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [suite]" parallel="tests">
+  <parameter name="browser" value="FF"/>
+  <test name="Sanity in FF(failed)" parallel="tests">
+    <parameter name="browser" value="FF"/>
+    <classes>
+      <class name="testng11.jquerytab">
+        <methods>
+          <include name="Setup2"/>
+          <include name="Setup2"/>
+          <include name="Setup2"/>
+          <include name="Setup2"/>
+        </methods>
+      </class> <!-- testng11.jquerytab -->
+      <class name="testng11.frame">
+        <methods>
+          <include name="SetUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testng11.frame -->
+    </classes>
+  </test> <!-- Sanity in FF(failed) -->
+  <test name="Sanity in GC(failed)" parallel="tests">
+    <parameter name="browser" value="FF"/>
+    <classes>
+      <class name="testng11.jquerytab">
+        <methods>
+          <include name="Setup2"/>
+          <include name="Setup2"/>
+          <include name="Setup2"/>
+          <include name="Setup2"/>
+        </methods>
+      </class> <!-- testng11.jquerytab -->
+      <class name="testng11.frame">
+        <methods>
+          <include name="SetUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testng11.frame -->
+    </classes>
+  </test> <!-- Sanity in GC(failed) -->
+</suite> <!-- Failed suite [suite] -->

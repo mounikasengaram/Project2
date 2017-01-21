@@ -1,0 +1,43 @@
+package testng111;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class newtab {
+WebDriver d;
+@Test
+public void Setup() throws Exception{
+	d.get("http://www.tsrtconline.in");
+	Assert.assertEquals("TSRTC Official Website for Online Bus Ticket Booking - tsrtconline.in",d.getTitle());
+	Actions a=new Actions(d);
+	 WebElement f=d.findElement(By.linkText("eTicket Login"));
+	a.moveToElement(f).keyDown(Keys.CONTROL).click(f).build().perform();
+	Thread.sleep(2000);
+    d.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL+"\t");
+    Thread.sleep(3000);
+    d.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL+"\t");
+    Thread.sleep(3000);
+    d.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL+"\t");
+    Thread.sleep(3000);
+}
+@BeforeMethod
+public void SetUp1(){
+	d= new FirefoxDriver();
+	d.manage().window().maximize();
+	d.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+}
+	@AfterMethod
+	public void SetUp2(){
+		d.close();
+	}
+}

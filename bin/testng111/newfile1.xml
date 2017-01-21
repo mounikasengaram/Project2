@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="suite" parallel="tests">
+  <test name="Sanity in FF">
+    <parameter name="browser" value="FF"/>
+    <classes>
+      <class name="testng11.frame"/>
+      <class name="testng11.jquerytab"/>
+    </classes>
+  </test> <!-- Sanity -->
+  <test name="Sanity in GC">
+    <parameter name="browser" value="FF"/>
+    <classes>
+      <class name="testng11.frame"/>
+      <class name="testng11.jquerytab"/>
+    </classes>
+  </test> <!-- Sanity -->
+</suite> <!-- suite -->
+            

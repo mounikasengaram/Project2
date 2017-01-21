@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [vikas]" parallel="tests">
+  <parameter name="browser" value="FF"/>
+  <listeners>
+    <listener class-name="testng.RetryListner"/>
+  </listeners>
+  <test name=" Sanity in FF(failed)" parallel="tests">
+    <parameter name="browser" value="FF"/>
+    <classes>
+      <class name="testng.jquerykeybord">
+        <methods>
+          <include name="SetUp2"/>
+          <include name="SetUp2"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testng.jquerykeybord -->
+      <class name="testng.mouse">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="SetUp2"/>
+          <include name="SetUp2"/>
+        </methods>
+      </class> <!-- testng.mouse -->
+    </classes>
+  </test> <!--  Sanity in FF(failed) -->
+  <test name=" Sanity in GC(failed)" parallel="tests">
+    <parameter name="browser" value="GC"/>
+    <classes>
+      <class name="testng.jquerykeybord">
+        <methods>
+          <include name="SetUp2"/>
+          <include name="SetUp2"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testng.jquerykeybord -->
+      <class name="testng.mouse">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="SetUp2"/>
+          <include name="SetUp2"/>
+        </methods>
+      </class> <!-- testng.mouse -->
+    </classes>
+  </test> <!--  Sanity in GC(failed) -->
+</suite> <!-- Failed suite [vikas] -->

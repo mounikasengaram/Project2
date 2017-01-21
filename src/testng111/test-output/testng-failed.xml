@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [suite]" parallel="tests">
+  <parameter name="browser" value="FF"/>
+  <test name="Sanity(failed)" parallel="tests">
+    <parameter name="browser" value="FF"/>
+    <classes>
+      <class name="testng111.alert">
+        <methods>
+          <include name="SetUp1"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- testng111.alert -->
+      <class name="testng111.multiplewindows">
+        <methods>
+          <include name="SetUp1"/>
+          <include name="SetUp2"/>
+        </methods>
+      </class> <!-- testng111.multiplewindows -->
+    </classes>
+  </test> <!-- Sanity(failed) -->
+</suite> <!-- Failed suite [suite] -->
